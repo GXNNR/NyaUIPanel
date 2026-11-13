@@ -1,0 +1,95 @@
+NyaUIPanel for Adobe After Effects
+Copyright (c) 2026 GX2NNR. All rights reserved.
+
+PROPRIETARY SOFTWARE
+
+NyaUIPanel is proprietary software developed by GX2NNR.
+
+This notice applies exclusively to the original code, implementation,
+interface design, documentation, and other original components created
+by GX2NNR as part of NyaUIPanel.
+
+The original components of NyaUIPanel are protected by applicable
+copyright and intellectual property laws.
+
+LICENSE
+
+Permission to use the original components of NyaUIPanel is granted
+only in accordance with the terms established by GX2NNR.
+
+Unless expressly authorized in writing by GX2NNR, you may not:
+
+* Copy or reproduce the original NyaUIPanel components, in whole or in
+  part.
+* Modify, adapt, translate, or create derivative works from the
+  original NyaUIPanel components.
+* Redistribute, resell, sublicense, publish, or commercially distribute
+  the original NyaUIPanel components or unauthorized versions of them.
+* Upload the original NyaUIPanel components to other repositories,
+  websites, services, or software packages without authorization.
+* Remove, alter, or obscure copyright, license, or attribution notices
+  belonging to NyaUIPanel.
+* Represent the original NyaUIPanel components as your own work.
+
+This license does not grant, restrict, replace, or otherwise modify any
+rights or obligations relating to third-party software or resources
+included with, referenced by, or used by NyaUIPanel.
+
+THIRD-PARTY COMPONENTS
+
+True Comp Duplicator
+
+Original author: Brennan Chapman
+
+NyaUIPanel includes an integration of True Comp Duplicator, a
+third-party Adobe After Effects script created by Brennan Chapman.
+
+The True Comp Duplicator source code remains the work and property of
+its original author. GX2NNR does not claim authorship or ownership of
+that third-party code.
+
+The True Comp Duplicator source code included with NyaUIPanel has not
+been modified or altered by GX2NNR.
+
+NyaUIPanel provides interface-level integration for accessing and using
+the third-party script from within the NyaUIPanel interface. The
+integration itself does not transfer ownership of the third-party
+component to GX2NNR.
+
+True Comp Duplicator is subject to its own license and terms. Nothing
+in this license is intended to grant permission to copy, modify,
+redistribute, sublicense, or otherwise use True Comp Duplicator beyond
+the rights granted by its original license.
+
+Original source:
+https://aescripts.com/true-comp-duplicator/
+
+NO WARRANTY
+
+NyaUIPanel is provided "AS IS", without warranty of any kind, express,
+implied, or statutory, including but not limited to warranties of
+merchantability, fitness for a particular purpose, and
+non-infringement.
+
+To the maximum extent permitted by applicable law, GX2NNR shall not be
+liable for any direct, indirect, incidental, consequential, special,
+or other damages resulting from the use, misuse, inability to use, or
+modification of the original NyaUIPanel components.
+
+SEPARATION OF RIGHTS
+
+Nothing in this notice shall be interpreted as a transfer of ownership
+or licensing rights in any third-party software, scripts, libraries,
+trademarks, or other materials.
+
+All rights in third-party components remain with their respective
+authors or rights holders and are governed by their respective terms.
+
+This notice grants rights only with respect to the original components
+created by GX2NNR.
+
+By using NyaUIPanel, you acknowledge that NyaUIPanel may contain or
+integrate third-party components that are subject to separate licensing
+terms.
+
+END OF LICENSE NOTICE
