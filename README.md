@@ -1,139 +1,160 @@
-# NyaUIPanel V2.5.7
+# NyaUIPanel 3.0.1
 
 ## User Manual & Complete Function Guide
 
 **Creator:** GX2NNR
 **Discord:** gx2nnr
-**Compatible with:** Adobe After Effects 2020+
+**Compatible with:** Adobe After Effects 2020+ (Windows installer included, manual install on macOS)
 
 ---
 
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
-2. [Requirements](#2-requirements)
-3. [Installation](#3-installation)
-4. [First Launch](#4-first-launch)
-5. [Interface Overview](#5-interface-overview)
-6. [NyaUI](#6-nyaui)
-   * [Auto Folders (Declutter)](#61-auto-folders)
-   * [Render Queue (RenderHub)](#62-render-queue)
-   * [Easy Precompose](#63-easy-precompose)
-   * [True Comp Duplicator](#64-true-comp-duplicator)
-   * [Watch Tower](#65-watch-tower)
-   * [Mark Cut](#66-mark-cut)
-   * [Expression Manager](#67-expression-manager)
-   * [Reduce 2X](#68-reduce-2x)
-   * [Hide Layer](#69-hide-layer)
-   * [Comp Editor (Comp-Mgr)](#610-comp-editor)
-   * [Auto Scale 3D](#611-auto-scale-3d)
-   * [NyaParallax](#612-nyaparallax)
-   * [Modal Dialog Integration](#613-modal-dialog-integration)
-7. [NyaPresets](#7-nyapresets)
-8. [NyaScripts](#8-nyascripts)
-9. [Panel Resizing](#9-panel-resizing)
-10. [Persistent User Data](#10-persistent-user-data)
-11. [Backup and Migration](#11-backup-and-migration)
-12. [Updating the Panel](#12-updating-the-panel)
-13. [Troubleshooting](#13-troubleshooting)
-14. [Quick Reference](#14-quick-reference)
-15. [Recommended Workflow](#15-recommended-workflow)
-16. [Safety and Usage Notes](#16-safety-and-usage-notes)
-17. [Video Tutorial](#17-video-tutorial)
-18. [License](#18-license)
-19. [Credits](#19-credits)
+2. [What's New in 3.0](#2-whats-new-in-30)
+3. [Requirements](#3-requirements)
+4. [Installation](#4-installation)
+5. [First Launch](#5-first-launch)
+6. [Interface Overview](#6-interface-overview)
+7. [Modular Layout](#7-modular-layout)
+8. [NyaUI Tools](#8-nyaui-tools)
+   * [Declutter](#81-declutter)
+   * [RenderHub](#82-renderhub)
+   * [Precomp](#83-precomp)
+   * [True Comp Duplicator](#84-true-comp-duplicator)
+   * [Watch Tower](#85-watch-tower)
+   * [MarkTools](#86-marktools)
+   * [Expression Manager](#87-expression-manager)
+   * [Reduce 2X](#88-reduce-2x)
+   * [Hide Layer](#89-hide-layer)
+   * [Comp Editor](#810-comp-editor)
+   * [Move Attributes](#811-move-attributes)
+9. [NyaPresets](#9-nyapresets)
+10. [NyaScripts](#10-nyascripts)
+11. [Settings and Themes](#11-settings-and-themes)
+12. [Automatic Updates](#12-automatic-updates)
+13. [Stability](#13-stability)
+14. [Persistent User Data](#14-persistent-user-data)
+15. [Backup and Migration](#15-backup-and-migration)
+16. [Troubleshooting](#16-troubleshooting)
+17. [Quick Reference](#17-quick-reference)
+18. [Safety and Usage Notes](#18-safety-and-usage-notes)
+19. [Video Tutorial](#19-video-tutorial)
+20. [License](#20-license)
+21. [Credits](#21-credits)
 
 ---
 
 # 1. Introduction
 
-**NyaUIPanel** is a custom Adobe After Effects ScriptUI panel created by **GX2NNR**.
+**NyaUIPanel** is an Adobe After Effects extension created by **GX2NNR**.
 
-The panel combines multiple production utilities into one interface, reducing the need to repeatedly open separate scripts or perform repetitive After Effects operations manually.
+It combines multiple production utilities into one dockable panel, reducing the need to repeatedly open separate scripts or perform repetitive After Effects operations manually.
 
 NyaUIPanel is divided into three main sections:
 
 ### NyaUI
-Contains the main workflow and production utilities.
+The main workflow and production tools, in a layout you can rearrange.
 
 ### NyaPresets
-Provides a searchable personal library for Adobe After Effects `.ffx` animation presets.
+A searchable personal library for After Effects `.ffx` animation presets.
 
 ### NyaScripts
-Provides a searchable personal library for external After Effects scripts such as `.jsx`, `.jsxbin`, and `.js`.
+A searchable personal library and launcher for external After Effects scripts (`.jsx`, `.jsxbin`, `.js`).
 
-The panel also stores user settings and library data separately from the main panel file.
+User settings and libraries are stored separately from the panel itself, so updates never touch your data.
 
 ---
 
-# 2. Requirements
+# 2. What's New in 3.0
 
-Before installing NyaUIPanel, make sure you have:
+* **Now an extension.** NyaUIPanel is no longer a ScriptUI `.jsx` file. It opens from `Window > Extensions` and docks like any native panel.
+* **Modular layout.** Choose which buttons you see, drag them around, group them in sections, rename and recolor them, and pick a size.
+* **New design.** Icon cards for every tool, three themes and a cleaner interface.
+* **Pin anything.** Pin any script or preset as a button in NyaUI.
+* **Watch Tower background service.** Folders are watched outside After Effects, so AE is only touched when a file actually appears or disappears.
+* **Automatic updates.** New versions are downloaded, verified and installed in the background.
+* **Stability.** Fixes panels freezing, buttons disappearing on hover, empty panels after switching workspaces, and the *"Cannot run a script while a modal dialog is waiting for response"* error.
+
+<img width="340" height="560" alt="nya_new_edit" src="https://github.com/user-attachments/assets/4c5504d2-5d5b-4931-84be-aafa8d51011a" />
+<img width="340" height="560" alt="nya_new_S" src="https://github.com/user-attachments/assets/55546e99-d759-44f3-b7ae-f54f5eddbf67" />
+<img width="340" height="560" alt="nya_new_presets" src="https://github.com/user-attachments/assets/f1566197-de9e-4647-8a49-958a48eb6414" />
+<img width="340" height="560" alt="nya_new_M" src="https://github.com/user-attachments/assets/5b0ed515-c66c-45d1-915a-cc423a901875" />
+
+
+* **This is EasyLayer EasyLayersLite 3.0.0.**
+
+<img width="440" height="330" alt="el_10_top" src="https://github.com/user-attachments/assets/b05139ee-442d-4f73-9d9c-77d52c42cfd4" />
+
+
+See `CHANGELOG.md` for the full list.
+
+---
+
+# 3. Requirements
 
 * Adobe After Effects 2020 or newer
-* A supported operating system for your After Effects installation
-* The NyaUIPanel package
-* Permission to copy files into the After Effects installation directory
+* Windows (installer included) or macOS (manual install)
+* The NyaUIPanel package from the [Releases page](https://github.com/GXNNR/NyaUIPanel/releases)
 
-The exact Adobe folder name depends on the version of After Effects installed on your computer.
-
-For example:
-
-```text
-Adobe After Effects 2024
-Adobe After Effects 2025
-Adobe After Effects 2026
-```
+No administrator rights are needed: the extension installs in your user folder.
 
 ---
 
-# 3. Installation
+# 4. Installation
 
-## 3.1 Windows Installation
+## 4.1 Upgrading from 2.x (important)
 
-### Step 1 — Open the ScriptUI Panels directory
-
-Navigate to:
+If you used a previous version, **remove the old file** from the ScriptUI Panels folder before installing:
 
 ```text
-C:\Program Files\Adobe\Adobe After Effects 2024\Support Files\Scripts\ScriptUI Panels
+C:\Program Files\Adobe\Adobe After Effects <version>\Support Files\Scripts\ScriptUI Panels\NyaUIPanel V2.x.jsx / .jsxbin
 ```
 
-Replace `Adobe After Effects 2024` with your installed version when necessary.
+If the old panel stays there, its Watch Tower timer can keep running and bring back the modal dialog error. Your presets, scripts and settings are kept and read automatically by 3.0.
 
-For example:
+## 4.2 Windows
+
+1. Download `NyaUIPanel_<version>.zip` from the [Releases page](https://github.com/GXNNR/NyaUIPanel/releases) and extract it.
+2. Close After Effects.
+3. Double-click `INSTALAR_Windows.bat`.
+4. Open After Effects and go to **Window → Extensions → NyaUIPanel**.
+
+The installer copies two extensions into `%APPDATA%\Adobe\CEP\extensions`:
 
 ```text
-C:\Program Files\Adobe\Adobe After Effects 2026\Support Files\Scripts\ScriptUI Panels
+com.nya.uipanel       the panel
+com.nya.watchtower    the Watch Tower background service (no window)
 ```
 
-### Step 2 — Copy the NyaUIPanel file
+It also enables loading of unsigned extensions for your user, which is required for extensions distributed outside Adobe Exchange.
 
-Copy the NyaUIPanel file into the `ScriptUI Panels` directory.
+## 4.3 macOS
 
-Example:
+1. In Terminal:
 
 ```text
-NyaUIPanel V2.5.7.jsxbin
+defaults write com.adobe.CSXS.11 PlayerDebugMode 1
+defaults write com.adobe.CSXS.12 PlayerDebugMode 1
 ```
 
-### Step 3 — Restart After Effects
+2. Copy `com.nya.uipanel` and `com.nya.watchtower` to:
 
-Close After Effects completely and open it again.
+```text
+~/Library/Application Support/Adobe/CEP/extensions/
+```
 
-### Step 4 — Open the panel
+3. Restart After Effects and open **Window → Extensions → NyaUIPanel**.
 
-In After Effects, go to:
+## 4.4 Uninstall
 
-**Window → NyaUIPanel V2.5.7**
-
-The panel should now be available as a ScriptUI panel.
+Run `DESINSTALAR_Windows.bat`. Your data in `Documents` is not removed.
 
 ---
 
-# 4. First Launch
+# 5. First Launch
 
-After opening NyaUIPanel, the main interface contains three tabs:
+The panel opens with three tabs:
 
 ```text
 NyaUI
@@ -141,159 +162,93 @@ NyaPresets
 NyaScripts
 ```
 
-The panel stores its libraries and settings separately from the main panel file.
+and a gear button (**⚙ Settings**) on the right.
 
-This allows the main panel file to be replaced during an update without normally requiring your preset and script libraries to be recreated.
+The status bar at the bottom shows the result of every action. The panel remembers the last tab you used.
 
 ---
 
-# 5. Interface Overview
+# 6. Interface Overview
 
-## NyaUI
+| Area | What it does |
+| --- | --- |
+| **NyaUI** | Tool buttons in sections you can rearrange |
+| **NyaPresets** | `.ffx` preset library |
+| **NyaScripts** | Script library and launcher |
+| **⚙ Settings** | Theme, updates, layout export/import, data folders |
+| **Status bar** | Result of the last action |
+| **Top banner** | Update notices |
 
-The main production toolbox.
+---
 
-Available functions:
+# 7. Modular Layout
+
+Click **✎ Edit layout** in the NyaUI tab to enter edit mode. Click **✔ Done** when finished. Changes are saved automatically.
+
+In edit mode you can:
+
+* **Move buttons:** drag them to reorder, or drop them into another section.
+* **Rename / recolor:** click a button to change its label and color. The color tints the icon and the border.
+* **Hide:** click the **×** on a button. Hidden tools can be added back with **+ Button**.
+* **+ Button:** add a hidden tool, any script file (`.jsx`, `.jsxbin`) or any preset file (`.ffx`) as a button.
+* **+ Section:** create a new section. Sections can be renamed, moved up/down, collapsed or deleted.
+* **Size:** **S** (compact list), **M** (cards) or **L** (large cards).
+
+Outside edit mode, click a section title to collapse or expand it.
+
+Layouts can be exported and imported from **⚙ Settings → NyaUI layout**, and reset to the default buttons at any time.
+
+---
+
+# 8. NyaUI Tools
+
+---
+
+## 8.1 Declutter
+
+**DECLUTTER** organizes the project into folders at the project root and can remove unused duplicate imports.
+
+### Built-in folders
 
 ```text
-Auto Folders (Declutter)
-Render Queue (RenderHub)
-Easy Precompose
-True Comp Duplicator
-Watch Tower
-Mark Cut
-Expression Manager
-Reduce 2X
-Hide Layer
-Comp Editor (Comp-Mgr)
-Auto Scale 3D
-NyaParallax
+VIDEO   IMAGE   COMPOSITIONS   AUDIO   PSD   SOLIDS   3D   OTHER
 ```
 
-## NyaPresets
+Each folder gets its own label color and is created only when needed. Existing root folders with the same name are reused. **OTHER** (unknown formats) is only used when its checkbox is ticked, even with **All** enabled.
 
-Preset library and manager for `.ffx` files.
+### Custom folders
 
-## NyaScripts
+Click **+ NEW FOLDER** to create your own rules:
 
-Script library and launcher for external After Effects scripts.
+* **Name** and **Color**
+* **Extensions**, for example `png, jpg, mov`
+* **Name contains**, for example `intro, title` (works for compositions and footage)
 
-The NyaUI section also includes an **UPDATE** button.
+An item goes into a custom folder if its extension is listed **or** its name contains one of the words. Custom folders are checked before the built-in ones and are saved in `Documents\SYNC\NyaDeclutter.json`.
 
----
+### Options
 
-# 6. NyaUI
-
-NyaUI contains the main After Effects workflow tools.
-
----
-
-## 6.1 Auto Folders
-
-**Auto Folders** (labeled **DECLUTTER** in the panel) is a project-organization utility.
-
-It automates folder management inside an After Effects project and can also remove unused duplicate imports.
-
-### Opening Auto Folders
-
-From NyaUI, click:
-
-**DECLUTTER**
-
-An **Organization Options** dialog opens.
-
-### Categories
-
-The tool automatically moves project items into named folders at the **project root**:
-
-```text
-VIDEO
-IMAGE
-COMPOSITIONS
-AUDIO
-PSD
-```
-
-Each folder is created only if it does not already exist. Existing folders with the same name at the root are reused.
-
-### Options Dialog
-
-* **All** — when checked, every category is enabled and individual checkboxes are disabled
-* Individual category checkboxes (VIDEO, IMAGE, COMPOSITIONS, AUDIO, PSD) — selectively enable only certain categories
-* **Remove unused duplicates** — when checked (default), removes FootageItem duplicates of the same file that are **not used** anywhere in the project
-
-### Supported file types
-
-Auto Folders recognizes a large range of extensions per category (video, image, audio, PSD/PSB). Unrecognized extensions are left in place.
-
-### How it works
-
-1. A snapshot of the project items is taken before any change (so item order changes do not require multiple passes).
-2. Each item is classified by type (Comp, Footage + extension) and moved to the matching folder.
-3. If **Remove unused duplicates** is enabled, duplicate imports of the same file are collapsed: the one currently in use is kept, unused ones are removed.
-4. Failed deletions are reported at the end.
+* **Only items loose in the project root:** items already inside your own folders are left alone.
+* **Remove unused duplicates:** when the same file is imported several times, one copy is kept (preferably the one in use) and unused copies are removed.
 
 ### Undo
 
-The whole operation is contained inside a single undo group named:
-
-```text
-Organize Project
-```
+The whole operation is one undo step: `Organize Project`.
 
 ---
 
-## 6.2 Render Queue
+## 8.2 RenderHub
 
-The **Render Queue** (labeled **RENDERHUB** in the panel) tool prepares selected compositions for rendering.
+**RENDERHUB** opens a floating window to name and queue compositions for rendering.
 
-### What it does
+### Adding compositions
 
-The function:
+Select compositions in the Project panel and press **+ ADD SELECTED**. The list supports search, **UP / DOWN** reordering, **REMOVE** and **CLEAR LIST**.
 
-1. Starts an After Effects undo group.
-2. Removes existing items from the Render Queue.
-3. Reads the selected project items.
-4. Uses the selected compositions.
-5. Reverses the selection order before processing.
-6. Adds the compositions to the Render Queue.
-7. Asks which naming mode should be used.
-8. Requests an output folder.
-9. Configures the first output module.
-10. Creates PNG output names automatically.
-11. Finishes with a completion message.
+### Naming modes
 
-### Selecting compositions
-
-Before using Render Queue, select the compositions you want to process in the After Effects Project panel.
-
-The tool uses the current **Project panel selection** rather than requiring each composition to be manually added to the Render Queue.
-
-### Custom Name Mode
-
-The tool can ask for a custom name for each selected composition.
-
-Example:
-
-```text
-Opening
-Fight Scene
-Ending
-```
-
-Each composition can receive its own custom output name.
-
-### AnimeClips Mode
-
-The alternate naming mode uses a base name.
-
-Example:
-
-```text
-Name - S01E1
-```
-
-When multiple compositions are selected, the tool automatically generates numbered names such as:
+* **CUSTOM:** name each render individually. An empty name uses the composition name.
+* **ANIME CLIPS:** one base name, numbered automatically in list order, for example:
 
 ```text
 Name - S01E1 (1)
@@ -301,1422 +256,515 @@ Name - S01E1 (2)
 Name - S01E1 (3)
 ```
 
-### Output Folder
+### Output path
 
-After naming, the tool asks you to select the output folder.
+* **Global folder** for every composition, or
+* **INDIVIDUAL** folders for the selected compositions.
 
-The generated Render Queue items are assigned to that location.
+### Options
 
-The tool configures the generated output as:
+* **Extension:** PNG, or AUTO (uses the Output Module template).
+* **Clear queue first:** removes existing Render Queue items before sending.
+* **Clear list after send**
+* **Render now:** starts rendering right away (**SEND & RENDER**).
 
-```text
-PNG
-```
+### Safety checks
 
-### Important
+Before sending, RenderHub checks for missing compositions, empty names, duplicate output names and missing folders (offering to create them). It also warns before overwriting existing files.
 
-**Render Queue removes the existing Render Queue items before adding the selected compositions.**
-
-Do not use this function while relying on unrelated items already waiting in the Render Queue.
-
----
-
-## 6.3 Easy Precompose
-
-**Easy Precompose** (labeled **PRECOMP** in the panel) is a streamlined precomposition utility.
-
-It reduces the number of manual steps normally required when creating a precomposition.
-
-Use it when you want to perform the panel's predefined precompose workflow from a single button.
-
-The panel-level **Move attributes ON/OFF** checkbox (bottom of the NyaUI tab) controls whether the precompose moves layer attributes into the new composition.
+Settings are saved in `Documents\SYNC\NyaRenderHub.json`.
 
 ---
 
-## 6.4 True Comp Duplicator
+## 8.3 Precomp
 
-**True Comp Duplicator** (labeled **COMP-2X** in the panel) is a third-party composition duplication script integrated into NyaUIPanel.
+**PRECOMP** precomposes **each selected layer individually**. Each new composition is trimmed to the length of its layer, and the precomp layer keeps the original in/out timing.
+
+Uses the **Move attributes** switch (see [8.11](#811-move-attributes)).
+
+---
+
+## 8.4 True Comp Duplicator
+
+**COMP-2X** is a third-party composition duplication script integrated into NyaUIPanel.
 
 The original script was created by **Brennan Chapman**.
 
-NyaUIPanel does not claim authorship or ownership of the original True Comp Duplicator code.
+NyaUIPanel does not claim authorship or ownership of the original True Comp Duplicator code. The third-party source is integrated without modification; NyaUIPanel only provides access to it from its interface.
 
-The third-party source is integrated without modification. NyaUIPanel provides an interface-level integration that allows the functionality to be accessed from the NyaUI interface.
-
-**True Comp Duplicator is not covered by the NyaUIPanel license.**
-
-It remains subject to its own license and terms.
-
-For licensing and source information, refer to the original True Comp Duplicator distribution:
+**True Comp Duplicator is not covered by the NyaUIPanel license.** It remains subject to its own license and terms.
 
 https://aescripts.com/true-comp-duplicator/
 
 ---
 
-## 6.5 Watch Tower
+## 8.5 Watch Tower
 
-**Watch Tower** (labeled **WATCHTOWER** in the panel) is a **folder mirror engine** for After Effects.
-
-It keeps selected disk folders and your After Effects project in sync, in both directions:
+**WATCHTOWER** is a **folder mirror engine**: it keeps disk folders and your After Effects project in sync.
 
 * Files that appear on disk are imported automatically.
-* Files that disappear from disk are removed from the project (with safety checks).
-* Items that are still in use but whose source files are gone are flagged in red instead of being removed.
+* Files that disappear from disk are removed from the project, with safety checks.
+* Items still in use whose source file is gone are labelled **red** and never removed.
 
-Watch Tower uses a **mirror** model: the folder on disk is the source of truth. There is no separate snapshot or database file that can get out of sync.
+### 8.5.1 How it works in 3.0
 
-### 6.5.1 Opening Watch Tower
+Watching is done by the **NyaWatchTower background service** (`com.nya.watchtower`), installed together with the panel:
 
-From NyaUI, click:
+* It starts with After Effects, has no window and does not depend on the workspace.
+* It checks the folders **outside After Effects**.
+* It only enters After Effects when a file actually appears or disappears. When nothing changes, it runs nothing inside AE.
+* It never opens dialogs. If After Effects is busy or rendering, it waits and retries.
 
-**WATCHTOWER**
+### 8.5.2 Interface
 
-A resizable Watch Tower window opens. If the window is already open, clicking the button re-focuses it instead of opening a duplicate.
+Click **WATCHTOWER** to open its screen inside the panel:
 
-Watch Tower can also run in the background: the scheduler persists even if the panel is closed, until you explicitly turn it OFF.
+* **+ ADD FOLDER:** add a folder to watch
+* **REPLACE:** replace the selected folder
+* **Interval:** how often folders are checked (2–60 s)
+* **OFF / ON:** turn auto-import on or off
+* **Folder list:** missing folders show `[missing]`; double-click opens the folder
+* **OPEN FOLDER:** open the selected folder in the file browser
+* **IMPORT NOW:** sync immediately (this is also where large removals are confirmed)
+* **REMOVE:** stop watching the selected folder (imported items stay in the project)
+* **Status line:** a green dot means the service is watching
 
-### 6.5.2 Interface
+### 8.5.3 Mirror behavior
 
-The Watch Tower window contains:
+* **New files** are imported inside folder items tagged `NWT:<path>` that mirror the disk hierarchy.
+* **Image sequences** (3 or more numbered files with the same prefix and extension) are imported as a single sequence.
+* **Deleted files** are removed from the project only if the file is really gone and the item is not used in any composition.
 
-* **SELECT FOLDER** — replace the currently selected watched folder
-* **+** — add a new watched folder to the list
-* **OFF / ON** — two-segment toggle; the active segment is highlighted
-* **Folder list** — all saved folders; folders that no longer exist are shown with `[missing]` prefix
-* **OPEN FOLDER IN EXPLORER** — opens the selected folder in the OS file browser
-* **IMPORT FILES** — forces an immediate scan of the selected folder (ignores cache/stability checks)
-* **REMOVE PATH** — stops watching the selected folder (does not remove already imported items from the project)
-* **Status line** — live status summary (see 6.5.6)
+### 8.5.4 Safety features
 
-### 6.5.3 Auto-sync modes
+* **Stability check:** new files are imported only after they stop changing (at least 8 seconds old, or two checks with the same size), to avoid half-copied renders.
+* **Batch limit:** at most 150 imports per sync; the rest continue on the next one.
+* **In-use protection:** items used in compositions are labelled red, never removed.
+* **Large removals on hold:** batches of 10+ items, or more than half of a folder, are not removed automatically. They show as *removals on hold* and are confirmed with **IMPORT NOW**.
+* **Rendering protection:** nothing is imported while the Render Queue is rendering.
 
-Watch Tower has two operating states:
-
-* **OFF** — the scheduler is not running. No background scanning, no auto-imports, no auto-removals. Manual actions (IMPORT FILES, +, SELECT FOLDER) still work but no periodic check happens.
-* **ON** — the scheduler fires a scan every `interval` seconds (default 4s, range 2–60s). Newly found files are imported; missing files trigger removal logic with safety checks.
-
-The OFF/ON state is persisted in `NyaWatchTower.json`. When you reopen the panel, if Watch Tower was ON, it resumes automatically.
-
-### 6.5.4 Mirror behavior
-
-For each watched folder:
-
-* **New files → imported** into the After Effects project, inside folder items tagged `NWT:<path>` that mirror the disk hierarchy.
-* **Image sequences → merged**: three or more numerically numbered files with the same prefix and extension are imported as a single sequence entry (requires AE to recognize them as a sequence).
-* **Deleted files → removed** from the project, but only if:
-  1. The file is confirmed gone from disk (not just unreadable for a moment).
-  2. The item is not currently in use in any composition (if it is, its label is set to red and it is **kept**, never deleted automatically).
-  3. A safety confirmation is accepted, if the deletion batch is large (10+ items, or more than 50% of tracked items).
-  4. Any prior "no" answer for the same batch is respected within the current session.
-
-### 6.5.5 Safety features
-
-* **Stability check** — new files are only imported if they are at least 8 seconds old (or `interval * 2`, whichever is larger). This avoids importing half-copied files.
-* **Batch import limit** — at most 150 files are imported per cycle. Additional files wait for the next scan, keeping After Effects responsive.
-* **In-use protection** — items still used in a composition are flagged but never removed automatically.
-* **Declined cache** — if you answer **No** to a large-deletion confirmation, Watch Tower remembers and does not re-ask for the same batch during the session.
-* **Scheduler pause on modal dialogs** — see [6.13 Modal Dialog Integration](#613-modal-dialog-integration).
-* **Rendering protection** — Watch Tower skips the scheduled scan while the Render Queue is actively rendering.
-
-### 6.5.6 Status counters
-
-The status line shows a compact summary:
+### 8.5.5 Status counters
 
 ```text
-Watching | 3 missing | 12 waiting | 2 removals on hold | 5 in use (red) | 1 failed | last 14:32:10  +3 / -1
+Watching | 1 missing | 12 waiting | 2 removals on hold | 5 in use (red) | 1 failed | last 14:32:10  +3 / -1
 ```
 
-* **missing** — watched folders that cannot be accessed
-* **waiting** — new files that are still too fresh to be imported
-* **removals on hold** — items pending confirmation for a large deletion batch
-* **in use (red)** — items whose source file is gone but which are still referenced by a composition
-* **failed** — imports that failed (see log)
-* **last +N / -M** — cumulative added / removed counts from the last scan
+* **missing:** watched folders that cannot be accessed
+* **waiting:** new files still being written
+* **removals on hold:** large removals waiting for **IMPORT NOW**
+* **in use (red):** items whose file is gone but are still used
+* **failed:** imports that failed
+* **last +N / -M:** time and result of the last change
 
-### 6.5.7 Configuration files
-
-Config and log live in:
+### 8.5.6 Files
 
 ```text
-Documents\SYNC\NyaWatchTower.json
-Documents\SYNC\NyaWatchTower.log
+Documents\SYNC\NyaWatchTower.json          folders, ON/OFF, interval
+Documents\SYNC\NyaWatchTower.status.json   live status written by the service
+Documents\SYNC\NyaWatchTower.log           errors from manual imports
 ```
 
-The JSON file stores the watched folder list, the currently selected index, the OFF/ON state, and the scan interval.
-
-### 6.5.8 Migration from older versions
-
-If a `NyaWatchTower.json` is not present, Watch Tower looks for the legacy files:
-
-```text
-Documents\SYNC\path1.json ... path10.json
-Documents\SYNC\lastUsedPath.json
-```
-
-and migrates the folder list from them. The old files are **not deleted** — they are left in place in case you need them.
-
-### 6.5.9 Removal from disk vs. removal from project
-
-* **Removing a path** from Watch Tower stops watching the folder but does **not** delete anything from the After Effects project.
-* **Deleting a file from disk** (outside AE) triggers the mirror removal on the next scan, subject to the safety checks in 6.5.5.
+Legacy `path1.json … path10.json` and `lastUsedPath.json` files from very old versions are migrated automatically and left in place.
 
 ---
 
-## 6.6 Mark Cut
+## 8.6 MarkTools
 
-**Mark Cut** (labeled **MARKCUT** in the panel) automatically splits layers at composition markers.
+**MARKTOOLS** (formerly Mark Cut) is a set of marker-driven tools in one window.
 
-This is useful when composition markers are being used as edit points.
+### Common controls
 
-### Basic workflow
+* **Marker color:** react to all markers or only to markers of one label color.
+* **COMP / LAYER** switch on each tool: use composition markers or each layer's own markers.
+* **REFRESH:** when a color filter is used, marker times are stored in the expression. If you move those markers, press REFRESH to update them.
 
-1. Open the composition you want to process.
-2. Place composition markers where cuts should occur.
-3. Make the composition active.
-4. Click **MARKCUT**.
+### CUT
 
-The script reads the composition's marker times.
+**CUT AT MARKERS** splits layers at the markers by duplicating and trimming them. It uses the selected layers, or all unlocked layers if none is selected. Undo: `MarkTools Cut at Markers`.
 
-The marker positions are sorted before processing.
+### SUBTITLES
 
-The marker positions are then used as layer split points.
+**TXT TO MARKERS**: select one text layer and pick a `.txt` file with **one line per marker**. Each line is placed in Source Text at its marker. The number of lines must match the number of markers.
 
-### Final cut
+### BOUNCE
 
-The composition duration is also added as a final cut position.
+**POSITION / ROTATION / SCALE**: repeats the property's keyframes (2 or more) at every marker, with an overshoot controlled by **Amp**, **Freq** and **Decay**.
 
-This allows the composition's end boundary to be processed as part of the operation.
+### PULSE
 
-### Undo
+**APPLY PULSE**: pulses the selected single-value properties (effect sliders, etc.), or Opacity if no property is selected. It goes from **Base** to **Peak** with **Attack / Hold / Release** in frames, with optional **Ease**.
 
-The operation is contained inside an After Effects undo group named:
+### SCROLLER
 
-```text
-Cut at Markers
-```
+**SCROLLER NULL**: creates a null whose Position jumps (or eases with **Smooth**) through its keyframes at every marker, looping. Add 2 or more Position keyframes afterwards.
 
-The complete operation can therefore be reverted using After Effects' normal Undo command.
+### NYA PROXIMITY
 
----
+**APPLY PROXIMITY**: the selected layers grow in Scale when they get close to the scroller null (**Radius**, **Grow**).
 
-## 6.7 Expression Manager
+### TOGGLE
 
-**Expression Manager** (labeled **X-PRESER** in the panel) is an expression library and management tool.
-
-It allows expressions to be extracted, stored, navigated, enabled or disabled, loaded, and applied.
-
-When opened, the tool creates or uses:
-
-```text
-Documents\Expressions
-```
-
-### Opening Expression Manager
-
-From NyaUI:
-
-**X-PRESER**
-
-A separate resizable Expression Manager window opens.
-
-### Expression display
-
-The interface includes a counter showing the current position in the expression collection.
-
-Example:
-
-```text
-1/5
-```
-
-This means the first expression of five stored entries is currently selected.
-
-### Extract Expression
-
-**Extract Expression** reads expressions from selected layers.
-
-Stored information includes:
-
-* Composition name
-* Layer index
-* Property path
-* Expression text
-
-### Expression navigation
-
-The manager includes:
-
-**Previous** — Moves to the previous stored expression.
-
-**Next** — Moves to the next stored expression.
-
-**Play / Toggle** — Controls whether the current expression is enabled.
-
-**Delete All** — Removes the stored expression entries managed by the tool.
-
-### Load from Folder
-
-The manager can load expression files from the Expressions folder.
-
-This allows previously saved expressions to be reused.
-
-Favorites are stored in:
-
-```text
-Documents\SYNC\NyaXPreserFavorites.json
-```
-
-### Apply Expression
-
-**Apply Expression** attempts to place the current expression onto the intended After Effects property.
-
-The manager first attempts to use the original property associated with the stored expression.
-
-If the original property cannot be used as expected, it can attempt a fallback using currently selected properties.
-
-### Upload File
-
-**Upload File (.txt)** allows a text file containing an expression to be loaded into the manager.
-
-### Save Expression
-
-Expression text can be saved to:
-
-```text
-Documents\Expressions
-```
-
-### Expressions Folder
-
-The **Expressions Folder** button opens the folder used by Expression Manager.
+**APPLY TOGGLE**: slides the selected layers between their Position keyframes at every marker (for example OFF and ON positions). The optional **Text** creates a text layer that cycles through a list of words, for example `OFF, ON` or `LOW, MID, HIGH`.
 
 ---
 
-## 6.8 Reduce 2X
+## 8.7 Expression Manager
 
-**Reduce 2X** (labeled **REDUCE-2X** in the panel) creates a reduced copy of the current project.
+**X-PRESER** extracts, stores, navigates, edits, loads and applies expressions.
 
-The tool saves the project and creates a separate reduced version without requiring the user to manually perform the complete process.
+* **Extract Expression:** reads every expression of the selected layer, remembering composition, layer and property path.
+* **◀ / ▶:** browse the extracted or loaded expressions (`1/5`). Edits in the text box are kept while browsing.
+* **▶ (toggle):** enable/disable the expressions of the selected layers.
+* **❌:** removes all expressions from the selected layers.
+* **Apply Expression:** writes the expression back to its original property. If that is not possible, it applies it to the currently selected properties.
+* **▼:** load an expression file from `Documents\Expressions`, with search and **favorites (★)**.
+* **Upload File (.txt):** load a text file from anywhere.
+* **Save:** save the current text to `Documents\Expressions`.
+* **Expressions Folder:** open the folder.
 
-### Project handling
+Favorites are stored in `Documents\SYNC\NyaXPreserFavorites.json`.
 
-The tool:
+---
+
+## 8.8 Reduce 2X
+
+**REDUCE-2X** creates a reduced copy of the project for the selected composition(s):
 
 1. Saves the current project.
-2. Reads the current project file.
-3. Determines the relevant selected project item or composition.
-4. Creates a dedicated output folder based on the project and composition.
-5. Creates a reduced project file.
-6. Uses After Effects' project-reduction command.
-7. Opens the appropriate project based on the user's choice.
+2. Creates a folder named `<ProjectName>_<CompName>` next to it.
+3. Runs After Effects' **Reduce Project** and saves the result there.
+4. Opens that folder and asks whether to open the reduced project or return to the original.
 
-The generated folder follows the pattern:
-
-```text
-<ProjectName>_<CompName>
-```
-
-### Important
-
-Because this operation can change the project context and open another `.aep`, save your work before using it.
-
-The function itself also saves the project before continuing.
+Save your work before using it, since it changes the open project.
 
 ---
 
-## 6.9 Hide Layer
+## 8.9 Hide Layer
 
-**Hide Layer** (labeled **HIDELAYER** in the panel) allows layers to be managed according to their After Effects label color.
+**HIDELAYER** manages layers by **label color**, using the first selected layer as reference.
 
-The tool uses the label color of the first selected layer as the reference color.
+* **HIDE LAYERS (SAME COLOR)**
+* **HIDE LAYERS (ARE NOT THIS COLOR)**
+* **SHOW ALL:** enables every layer and turns Shy off
 
-### Opening Hide Layer
+Options:
 
-From NyaUI:
+* **HIDE VISIBILITY:** turns the affected layers off.
+* **ENABLE SHY:** marks the affected layers as Shy.
 
-**HIDELAYER**
-
-The tool opens a window titled:
-
-```text
-NyaHideColorLayer
-```
-
-### Available actions
-
-#### HIDE LAYERS (SAME COLOR)
-
-Targets layers using the same label color as the selected reference layer.
-
-#### HIDE LAYERS (ARE NOT THIS COLOR)
-
-Targets layers whose label color is different from the selected reference color.
-
-#### SHOW ALL
-
-Restores all layers to a visible/non-shy state.
-
-### Hide Visibility
-
-The:
-
-```text
-HIDE VISIBILITY
-```
-
-checkbox determines whether the tool changes normal layer visibility.
-
-When enabled, affected layers can be disabled through their `enabled` state.
-
-### Enable Shy
-
-The:
-
-```text
-ENABLE SHY
-```
-
-checkbox controls the After Effects Shy property for affected layers.
-
-The tool can therefore be used for visibility management, Shy management, or both.
-
-### Show All behavior
-
-**SHOW ALL** enables every layer and disables Shy for every layer in the active composition.
-
-### Settings storage
-
-Hide Layer stores its checkbox settings in:
-
-```text
-Documents\SYNC\NyaHCLSettings.json
-```
-
-The `SYNC` folder is created automatically when needed.
+Settings are saved in `Documents\SYNC\NyaHCLSettings.json`.
 
 ---
 
-## 6.10 Comp Editor
+## 8.10 Comp Editor
 
-**Comp Editor** (labeled **COMP-MGR** in the panel) is a composition-management utility with careful handling of transforms, parenting, keyframes, cameras and precompositions.
+**COMP-MGR** opens **NyaCompManager V2.1**.
 
-It provides three primary operations — Change Resolution, Change Duration, Change FPS — plus three 3D helper buttons.
+### Change Resolution
 
-### Opening Comp Editor
+Enter width and height. The content is **scaled to fit**:
 
-From NyaUI:
+* Position, Scale and Anchor Point are mapped, including keyframes and spatial tangents.
+* Parenting is respected, so nothing is scaled twice.
+* Cameras and lights keep their framing (zoom, focus distance, aperture, falloff, radius).
+* Precomps that are also used outside this hierarchy are left untouched.
+* Locked layers are processed but never unlocked.
+* Everything is validated first (After Effects limit: 30000 px).
 
-**COMP-MGR**
+### Change Duration
 
-A resizable **NyaCompManager V2.1** window opens. If it is already open, clicking the button re-focuses the existing window.
+Accepted formats: `90`, `90.5`, `1:30`, `1:30:00`, `1:30,5`, `240f` (frames).
 
-### 6.10.1 Change Resolution
+* Layers that reached the old end are extended to the new end. Layers with their own timing are left alone.
+* Footage is clamped to its source length.
+* The work area is adjusted.
+* Locked layers are skipped.
 
-Click **CHANGE RESOLUTION** and enter a width and height. Only comps that pass validation are touched — if any nested comp would exceed After Effects' 30000-pixel limit, the entire operation aborts before any change is made.
+### Change FPS
 
-Behavior:
+Enter a frame rate (for example `23.976`, `29.97`, `30`, `60`).
 
-* The active composition is resized to the new width/height.
-* Layer transforms are adjusted so **content is scaled to fit** (uniform scale, `min(sx, sy)`).
-* **Position, Scale, Anchor Point** are mapped — including all their keyframes and their **spatial tangents** — so animations are preserved.
-* **Parenting is respected**: a layer that is parented to another layer already scaled by its parent will not be scaled twice.
-* **Cameras and lights** are adjusted so their framing is preserved: `zoom`, `focusDistance`, `aperture` (cameras) and `falloffDistance`, `radius` (lights) are all updated.
-* **Shared precomps are detected and left untouched** — a precomp that is also used outside the current hierarchy is treated as plain footage and not resized, preventing it from breaking unrelated compositions.
-* **Layers showing precomps that get resized** have their Anchor Point adjusted to follow the new center.
-* **Locked layers are still processed** (their transforms are updated) but their `locked` state is never changed.
+* The animation keeps its timing in seconds and keyframes snap to the new frame grid.
+* Easing, continuity, auto-bezier and spatial tangents are preserved.
+* Expressions using `time` or `frame` are counted so you can review them.
+* Locked layers are skipped.
 
-Behavior on AE's automatic adjustments: After Effects may reposition or rescale layers showing precomps when the source comp is resized. Comp Editor snapshots those layers before resizing and restores the original values before applying its own transformation, so the final result is fully predictable.
+The **Change nested compositions** checkbox of each operation controls recursion into precomps. Every operation is a single undo step.
 
-The **Change nested compositions** checkbox controls recursion into nested precomps.
+### Toggle Auto Scale 3D
 
-### 6.10.2 Change Duration
+Toggles an expression on the selected 3D layers that compensates Scale according to their Z distance from the active camera.
 
-Click **CHANGE DURATION** and enter a duration. Accepted formats:
+### NyaParallax
+
+Prepares a parallax setup on the selected layers:
+
+1. Enables 3D.
+2. Applies the auto-scale expression.
+3. Assigns Z positions (default distance `2500`).
+4. Creates a 3D null named `Camera Controller` and parents the existing camera to it.
+
+A camera must already exist in the composition.
+
+---
+
+## 8.11 Move Attributes
+
+The **Move attributes** switch (ON / OFF) controls whether **PRECOMP** moves the layer's attributes into the new composition. Its state is remembered between sessions.
+
+---
+
+# 9. NyaPresets
+
+A personal library for `.ffx` presets.
+
+* **Search:** filters by name and description while typing.
+* **Category filter** and **+** to create categories (default: VFX, Color, Audio, Text, Motion, Other).
+* **Apply / double-click:** applies the preset to the selected layer(s).
+* **Multi-select:** Ctrl/Shift-click.
+* **★:** mark or unmark favorites. The **☆** button above the list shows favorites only.
+* **📌:** pin the selected preset(s) as buttons in NyaUI.
+* **Add:** pick one or more `.ffx` files, then choose a category and an optional description.
+* **Edit:** name, category and description.
+* **Delete:** removes entries from the library (the `.ffx` files are not deleted).
+* **↻:** reload the library from disk.
+* **⋯ menu:** export library (backup), import library (adds to the current one), open library folder, delete all.
+
+Presets whose file no longer exists are shown in red.
+
+---
+
+# 10. NyaScripts
+
+A personal launcher for `.jsx`, `.jsxbin` and `.js` scripts.
+
+* **Add Script:** pick one or more files. The alias is the filename without extension, and duplicate paths are ignored.
+* **Run / double-click / Enter:** runs the script.
+* **Search**, **categories** (with **+**), **★ favorites** and the **☆** favorites filter.
+* **📌:** pin the selected script as a button in NyaUI.
+* **Edit:** change the alias and category (the file itself is not renamed).
+* **Delete:** removes the entry (the file is not deleted).
+* **⋯ menu:**
+  * **Try to open as dockable panel:** runs scripts through their After Effects menu command (`app.findMenuCommandId` / `app.executeCommand`) when available.
+  * **Export list (.qsl)** / **Import list (replace)**
+  * **Open data folder**
+  * **Delete ALL scripts**
+
+Scripts run with `$.evalFile`; interfaces they return are kept alive so their windows do not close.
+
+---
+
+# 11. Settings and Themes
+
+Open **⚙ Settings**:
+
+* **Appearance:** After Effects (default), Black or Classic grey.
+* **Updates:** automatic check, automatic install, and **Check now**.
+* **NyaUI layout:** Export, Import, Reset.
+* **Data:** open the SYNC folder, and **Reload host** (reloads the After Effects side of the panel without restarting).
+
+---
+
+# 12. Automatic Updates
+
+NyaUIPanel checks for new versions in the background (every few hours while open).
+
+When a new version is found, it:
+
+1. Downloads the package without freezing After Effects.
+2. Verifies its **SHA-256** fingerprint. If it does not match, nothing is installed.
+3. Backs up the current version to `Documents\SYNC\NyaUIPanel_backup\<version>`.
+4. Installs the panel and the Watch Tower service.
+5. Shows a notice. The update applies after restarting After Effects.
+
+You can disable automatic checking or installing in **⚙ Settings → Updates**. If an automatic install is not possible, the notice offers **Download manually**.
+
+Users of 2.x versions get an update notice that opens the Releases page. Install 3.0 manually once (see [4.1](#41-upgrading-from-2x-important)); after that, updates are automatic.
+
+---
+
+# 13. Stability
+
+Version 3.0 fixes the root cause of panels freezing, buttons disappearing on hover, empty panels after switching workspaces, and the *"Cannot run a script while a modal dialog is waiting for response"* error.
+
+* **Own engine:** each panel runs in its own scripting engine, so a failure elsewhere cannot take it down.
+* **No timers inside After Effects:** Watch Tower now runs as an external service and only touches After Effects when something changes.
+* **No surprise dialogs:** background processes never open dialogs.
+* **Non-blocking updates:** the update check never freezes After Effects at startup.
+
+---
+
+# 14. Persistent User Data
 
 ```text
-90          (seconds)
-90.5        (seconds with decimal)
-1:30        (MM:SS)
-1:30:00     (HH:MM:SS)
-1:30,5      (decimal with comma)
-240f        (frames — uses comp.frameRate)
-```
+Documents\SYNC\
+    NyaUIPanel_layout.json        NyaUI buttons and sections
+    NyaUIPanel_settings.json      theme, updates, last tab, Move attributes
+    NyaUIPanel_update.json        update check cache
+    NyaUIPanel_backup\            previous versions kept by the updater
+    NyaWatchTower.json            Watch Tower folders and state
+    NyaWatchTower.status.json     Watch Tower service status
+    NyaWatchTower.log             Watch Tower errors
+    NyaRenderHub.json             RenderHub settings
+    NyaDeclutter.json             Declutter custom folders
+    NyaXPreserFavorites.json      X-PRESER favorites
+    NyaHCLSettings.json           Hide Layer settings
+
+Documents\Expressions\            saved expressions
+
+Documents\NyaPresets\
+    library.json
+    categories.json
 
-Behavior:
-
-* The active composition duration is changed to the new value.
-* **Layers whose outPoint reaches the old end** are extended (or truncated) to the new end.
-* Layers with their own timing (e.g. a 2-second intro in a 30-second comp) are **left untouched** in their timing — you keep your creative timing.
-* **Locked layers are skipped**, never unlocked.
-* The `outPoint` of footage layers is clamped to the source duration if needed (no more `Value out of range` errors).
-* **Work area** is scaled proportionally if it covered the whole comp; otherwise only trimmed if it extends past the new end.
-
-The **Change nested compositions** checkbox controls recursion into nested precomps.
-
-### 6.10.3 Change FPS
-
-Click **CHANGE FPS** and enter a frame rate (e.g. `23.976`, `29.97`, `30`, `60`).
-
-Behavior:
-
-* The active composition frame rate is changed to the new value.
-* **Keyframes are re-timed to the new grid**: an animation that visually lasted 1 second at 24 fps still lasts 1 second at 30 fps, and its keys snap to exact frame positions of the new grid.
-* **Easing, temporal continuity, auto-bezier and spatial tangents are preserved** when keys are re-timed.
-* **Expressions containing `time` or `frame`** are detected and reported (their behavior may change when fps changes — review those expressions manually).
-* The comp duration is re-rounded to the nearest frame at the new fps.
-* **Locked layers are skipped**, never unlocked.
-* **Markers are re-timed** along with the keyframes when duration is scaled.
-
-The **Change nested compositions** checkbox controls recursion into nested precomps.
-
-### 6.10.4 Validation and safety
-
-All three operations share the same safety guarantees:
-
-* **Pre-validation** — all target comps are validated (max 30000 px, max 999 fps, max 3 hours) before any change is applied.
-* **Undo group always closed** — even if an error occurs mid-operation, `EndUndoGroup` is guaranteed. A single Ctrl+Z reverts the whole operation.
-* **Locked layers are skipped** (not unlocked).
-* **Shared precomps are excluded** from recursive operations.
-* **Failed items are counted** and reported at the end with a summary alert.
-
-### 6.10.5 Auto Scale 3D and NyaParallax
-
-These two buttons behave exactly as before and are **not** affected by the resolution/duration/fps changes:
-
-* **TOGGLE AUTO SCALE 3D** — toggles the auto-scale expression on selected 3D layers.
-* **NYAPARALLAX** — prepares a camera-based 3D parallax setup on selected layers (activates 3D, applies scale expression, assigns Z positions, creates a Camera Controller null parent for the active camera).
-
-Both use the same "no camera" alert if no CameraLayer exists in the active comp.
-
-### 6.10.6 Version
-
-The current Comp Editor is **NyaCompManager V2.1**.
-
----
-
-## 6.11 Auto Scale 3D
-
-**Auto Scale 3D** is an After Effects expression-based scaling system.
-
-It provides controls to:
-
-* Enable the scale expression
-* Disable the scale expression
-* Apply the scale expression
-
-The expression uses the active camera's zoom and the layer's Z position.
-
-The system compensates the layer scale according to its distance from the camera.
-
-This is useful when building camera-based 3D scenes where layers move along the Z axis.
-
----
-
-## 6.12 NyaParallax
-
-**NyaParallax** is a preparation tool for camera-based 3D parallax.
-
-When triggered, it performs the following workflow:
-
-1. Activates 3D.
-2. Applies the automatic scale expression.
-3. Assigns Z positions.
-4. Creates a camera controller.
-5. Parents the camera to the controller.
-
-### Default Z position
-
-The system uses:
-
-```text
-2500
-```
-
-as the default Z value when assigning depth.
-
-### Camera Controller
-
-The script creates a 3D null named:
-
-```text
-Camera Controller
-```
-
-The camera is then parented to that controller.
-
-This provides a central control layer for moving the camera setup.
-
-### Completion message
-
-When the operation finishes, the tool displays:
-
-```text
-Parallax Complete.
-```
-
----
-
-## 6.13 Modal Dialog Integration
-
-NyaUIPanel V2.5.7 introduces automatic Watch Tower pause during native modal dialogs.
-
-### The problem
-
-After Effects does not allow ExtendScript to run while a native modal dialog (`alert`, `confirm`, `prompt`, `Folder.selectDialog`, `File.openDialog`, `File.saveDialog`, `Window.show()` on a `"dialog"` window) is open.
-
-If Watch Tower's scheduler fires in that moment, After Effects shows an error.
-
-### The fix
-
-All NyaUIPanel features that need to open a native dialog now route through dedicated wrappers:
-
-* `nyaAlert(...)` — pauses Watch Tower, calls `alert`, resumes
-* `nyaConfirm(...)` — same for `confirm`
-* `nyaPrompt(...)` — same for `prompt`
-* `nyaDlg(obj, method, ...)` — same for `Folder.selectDialog` / `File.openDialog` / `File.saveDialog`
-* `nyaShow(window)` — same for `Window.show()`
-
-The pause uses a reference counter, so nested dialogs work correctly. Watch Tower is only paused while at least one modal dialog is open. When the last dialog closes, the scheduler resumes automatically if Watch Tower was in ON state.
-
-### What this means for you
-
-* **No more "script cannot run while a modal dialog is open" errors** when Watch Tower is active and you click a button that opens a dialog.
-* The behavior is transparent — no visible difference in NyaUIPanel's UI.
-* The pause is only applied to the Watch Tower scheduler; it does not affect any other background task.
-
----
-
-# 7. NyaPresets
-
-**NyaPresets** is a preset-management system for Adobe After Effects `.ffx` files.
-
-It allows users to build a personal searchable preset library.
-
-Available categories include:
-
-```text
-VFX
-Color
-Audio
-Text
-Motion
-Other
-```
-
----
-
-## 7.1 Adding Presets
-
-Click:
-
-**Add Preset**
-
-You can select one or multiple `.ffx` files.
-
-During the process you can assign:
-
-* Category
-* Description
-
-The presets are then added to the library.
-
----
-
-## 7.2 Applying Presets
-
-Select a preset and click:
-
-**Apply**
-
-A preset can also be applied by double-clicking it in the list.
-
----
-
-## 7.3 Searching Presets
-
-The search field filters the preset library while typing.
-
-Use the **X** control to clear the search.
-
-The category dropdown provides an additional filter.
-
-For example:
-
-```text
-Motion
-```
-
-displays presets assigned to the Motion category.
-
-Search and category filtering can therefore be combined.
-
----
-
-## 7.4 Editing Presets
-
-### Edit Name
-
-Allows the selected preset's information to be edited.
-
-The editing interface can modify:
-
-* Name
-* Category
-* Description
-
-### Delete Preset
-
-Removes selected preset entries from the library.
-
-Multiple entries can be selected for removal.
-
-### Refresh
-
-Reloads the preset library.
-
-A successful reload displays:
-
-```text
-Library reloaded
-```
-
----
-
-## 7.5 NyaPresets Settings
-
-The settings system includes library-management features such as:
-
-**Export** — Exports the current preset library.
-
-**Import** — Imports a previously saved library.
-
-This is useful for backups or transferring your preset database to another system.
-
-Both Export and Import use UTF-8 encoding so libraries containing non-ASCII characters transfer correctly.
-
----
-
-## 7.6 NyaPresets Storage
-
-The preset system stores its library under:
-
-```text
-Documents\NyaPresets\library.json
-Documents\NyaPresets\categories.json
-```
-
-The folder is created automatically on first launch.
-
-If `Documents\NyaPresets` cannot be created for permission reasons, the panel falls back to `Folder.userData\NyaPresets`.
-
-Older versions used `Folder.userData\NyaPresets` only. On first launch of V2.5.7, the library is migrated automatically from the legacy location to `Documents\NyaPresets` (the legacy file is kept).
-
----
-
-# 8. NyaScripts
-
-**NyaScripts** is a personal script launcher.
-
-It allows After Effects scripts to be registered once and executed later from the NyaUIPanel interface.
-
-Supported file types include:
-
-```text
-.jsx
-.jsxbin
-.js
-```
-
----
-
-## 8.1 Adding Scripts
-
-Click:
-
-**Add Script**
-
-Select the script you want to register.
-
-NyaScripts automatically creates an alias based on the filename.
-
-Example:
-
-```text
-MyTool.jsx
-```
-
-becomes:
-
-```text
-MyTool
-```
-
-The extension is removed from the displayed alias.
-
-The system also checks for duplicate file paths.
-
----
-
-## 8.2 Running Scripts
-
-A stored script can be executed directly from the NyaScripts list.
-
-Double-clicking a script launches it.
-
-Before execution, NyaScripts validates that the referenced file still exists.
-
----
-
-## 8.3 Script Execution Modes
-
-NyaScripts supports two execution approaches.
-
-### Standard Mode
-
-The script file is evaluated directly using After Effects' scripting environment.
-
-This is handled through:
-
-```text
-$.evalFile
-```
-
-### Dockable Panels Mode
-
-When Dockable Panels mode is enabled, NyaScripts attempts to execute the script through an After Effects menu command.
-
-This uses:
-
-```text
-app.findMenuCommandId()
-```
-
-and:
-
-```text
-app.executeCommand()
-```
-
-This mode is intended for scripts that behave as After Effects panels or menu-based tools.
-
----
-
-## 8.4 Keeping Script Interfaces Alive
-
-When a script creates a persistent UI, NyaScripts can keep the returned interface alive using:
-
-```text
-$.global.__nyaScriptsKeptAlive
-```
-
-This helps prevent certain script-generated interfaces from being immediately destroyed after execution.
-
----
-
-## 8.5 Searching Scripts
-
-The search field filters the library using the stored script aliases.
-
-The list updates as the search text changes.
-
-Use the **X** button to clear the filter.
-
----
-
-## 8.6 Renaming Scripts
-
-**Edit Name** changes the alias shown inside NyaScripts.
-
-It does not rename the actual `.jsx`, `.jsxbin`, or `.js` file.
-
-Example:
-
-Actual file:
-
-```text
-D:\AfterEffects\Scripts\Example.jsx
-```
-
-Displayed alias:
-
-```text
-My Animation Tool
-```
-
-The file remains:
-
-```text
-Example.jsx
-```
-
----
-
-## 8.7 Deleting Scripts
-
-**Delete Script** removes the script entry from the NyaScripts library.
-
-This is a library operation.
-
-It does not physically delete the original script file from your computer.
-
----
-
-## 8.8 Refreshing NyaScripts
-
-Click:
-
-**Refresh**
-
-to reload the saved script library.
-
-This is useful after modifying the library or when you want to force the UI to reload its stored data.
-
----
-
-## 8.9 Exporting the Script Library
-
-NyaScripts can export its script list using the:
-
-```text
-.qsl
-```
-
-format.
-
-The exported file stores the library information so it can be imported later.
-
----
-
-## 8.10 Importing the Script Library
-
-Importing a `.qsl` library allows a previously exported script collection to be restored.
-
-The import process asks for confirmation before replacing the current list.
-
-This prevents accidental replacement of the current script library.
-
----
-
-## 8.11 Delete All Scripts
-
-NyaScripts includes a **Delete All Scripts** operation.
-
-Because this affects the entire stored script list, the tool displays a confirmation dialog before deleting the entries.
-
----
-
-## 8.12 NyaScripts Storage
-
-NyaScripts stores its information under:
-
-```text
 Documents\NyaScripts\
+    AfterEffectsScripts.txt
+    AfterEffectsScripts_backup.txt
+    NyaScriptsSettings.txt
+    NyaScriptsCategories.txt
 ```
 
-The main files include:
-
-```text
-AfterEffectsScripts.txt
-AfterEffectsScripts_backup.txt
-NyaScriptsSettings.txt
-NyaScripts_errors.log
-```
-
-### AfterEffectsScripts.txt
-Stores the script library.
-
-### AfterEffectsScripts_backup.txt
-Used as a backup of the script library data.
-
-### NyaScriptsSettings.txt
-Stores persistent settings such as execution mode.
-
-### NyaScripts_errors.log
-Stores error information generated by the script system.
-
-If `Documents\NyaScripts` cannot be created for permission reasons, the panel falls back to `Folder.userData\NyaScripts`. Legacy files are migrated automatically on first launch.
+Libraries from older versions stored in `AppData\Roaming\NyaPresets` and `AppData\Roaming\NyaScripts` are migrated automatically on first launch.
 
 ---
 
-# 9. Panel Resizing
+# 15. Backup and Migration
 
-NyaUIPanel is resizable.
-
-When the available panel width becomes too small, the NyaUI button layout automatically changes orientation.
-
-This allows the controls to adapt to different panel sizes and dock positions.
-
-The panel can be used:
-
-* As a floating panel
-* As a docked After Effects panel
-* In a narrow workspace
-* In a wider custom workspace
-
----
-
-# 10. Persistent User Data
-
-NyaUIPanel separates its executable panel from several user-data locations.
-
-Personal libraries and settings are not intended to be stored inside the After Effects `ScriptUI Panels` installation folder.
-
-Known storage locations include:
-
-### Expressions
-
-```text
-Documents\Expressions
-```
-
-### X-PRESER favorites
-
-```text
-Documents\SYNC\NyaXPreserFavorites.json
-```
-
-### Hide Layer
-
-```text
-Documents\SYNC\NyaHCLSettings.json
-```
-
-### Watch Tower
-
-```text
-Documents\SYNC\NyaWatchTower.json
-Documents\SYNC\NyaWatchTower.log
-```
-
-### NyaPresets
-
-```text
-Documents\NyaPresets\library.json
-Documents\NyaPresets\categories.json
-```
-
-(fallback: `Folder.userData\NyaPresets`)
-
-### NyaScripts
-
-```text
-Documents\NyaScripts\
-```
-
-with:
-
-```text
-AfterEffectsScripts.txt
-AfterEffectsScripts_backup.txt
-NyaScriptsSettings.txt
-NyaScripts_errors.log
-```
-
-(fallback: `Folder.userData\NyaScripts`)
-
----
-
-# 11. Backup and Migration
-
-Before reinstalling After Effects, moving to another computer, or performing a major system migration, create backups of your personal NyaUIPanel data.
-
-Important data includes:
-
-```text
-Documents\Expressions
-```
+Before reinstalling After Effects or moving to another computer, back up:
 
 ```text
 Documents\SYNC
-```
-
-(this single folder contains X-PRESER favorites, Hide Layer settings, and all Watch Tower configuration and logs)
-
-```text
+Documents\Expressions
 Documents\NyaPresets
-```
-
-(or `Folder.userData\NyaPresets` if Documents is not writable)
-
-```text
 Documents\NyaScripts
 ```
 
-(or `Folder.userData\NyaScripts` if Documents is not writable)
+Copy them to the same place on the new computer, install NyaUIPanel, and everything is restored, including your NyaUI layout.
 
-If you maintain a large preset or script library, use the built-in **Import / Export** functions whenever practical.
-
----
-
-# 12. Updating the Panel
-
-The NyaUI footer contains an:
-
-```text
-UPDATE
-```
-
-button.
-
-The button opens the current NyaUIPanel update/download location.
-
-Current update location:
-
-https://drive.google.com/drive/folders/1RY5AVB7WREy8Iq3WeXNmjxkkGnneyMGl?usp=sharing
-
-## Recommended update procedure
-
-1. Close After Effects.
-2. Keep a backup of your current panel file.
-3. Install the new NyaUIPanel version in the same `ScriptUI Panels` directory.
-4. Start After Effects again.
-5. Open NyaUIPanel through the **Window** menu.
-
-Your libraries are stored separately from the main panel file and are designed to remain available when the panel is updated.
+You can also use the built-in **Export / Import** functions for presets, scripts and the NyaUI layout.
 
 ---
 
-# 13. Troubleshooting
+# 16. Troubleshooting
 
-## NyaUIPanel does not appear in the Window menu
+## NyaUIPanel does not appear in Window → Extensions
 
-Check the following:
+* Run `INSTALAR_Windows.bat` again with After Effects closed.
+* Check that `%APPDATA%\Adobe\CEP\extensions\com.nya.uipanel\CSXS\manifest.xml` exists.
+* Restart After Effects completely.
 
-* The file is inside `Scripts\ScriptUI Panels`.
-* The file is compatible with the installed After Effects version.
-* After Effects was restarted after installation.
-* The filename and extension are correct.
+## The status bar shows "Host: ERR…"
 
----
+The After Effects side of the panel could not load. Try **⚙ Settings → Reload host**. If it persists, reinstall and report the message.
 
-## A NyaUI function does nothing
+## Buttons do nothing / "After Effects is busy"
 
-Many NyaUI functions depend on the current After Effects context.
+A dialog is open in After Effects, or a long operation is running. Close it and try again. Also check that the tool has what it needs (active composition, selected layers, selected project items, markers or a camera).
 
-Depending on the tool, this may include:
+## Watch Tower says "background service not detected"
 
-* An active composition
-* Selected layers
-* Selected project items
-* Composition markers
-* A camera
-* 3D layers
-
-Make sure the required project elements are selected before running the operation.
-
----
-
-## Render Queue gives unexpected results
-
-Remember that **Render Queue clears the existing Render Queue items before adding the selected compositions**.
-
-Also verify that the correct compositions are selected in the Project panel.
-
----
-
-## Mark Cut does nothing
-
-Check that:
-
-1. A composition is active.
-2. The composition contains markers.
-3. The layers you want to process are present.
-
-The tool relies on composition marker positions as cut points.
-
----
-
-## Hide Layer does not behave as expected
-
-Make sure:
-
-* A composition is active.
-* At least one layer is selected.
-* The selected layer has the label color you want to use as the reference.
-
-The first selected layer determines the reference color.
-
----
+* Make sure `com.nya.watchtower` exists in `%APPDATA%\Adobe\CEP\extensions`.
+* Restart After Effects.
+* Meanwhile, **IMPORT NOW** still syncs manually.
 
 ## Watch Tower is not importing new files
 
-Check:
+* Check that it is **ON** and that the folder is not `[missing]`.
+* **waiting** is normal while files are still being written.
+* If it shows **failed**, see `Documents\SYNC\NyaWatchTower.log`.
 
-1. The OFF/ON toggle is set to **ON**.
-2. The watched folder is selected in the list (not the `[missing]` prefix).
-3. The new files are **at least 8 seconds old** — Watch Tower waits before importing to avoid half-copied files.
-4. The status line shows **waiting** but nothing else — this is normal while files are still "young".
-5. If the status shows **failed**, open `Documents\SYNC\NyaWatchTower.log` to see the exact error.
+## "Update failed: downloaded file does not match the published SHA-256"
 
-You can also click **IMPORT FILES** to force an immediate scan that bypasses the stability check.
+The package on the server is not the one that was published with that fingerprint. Nothing was installed. Use **Download manually** or wait for a corrected release.
 
----
+## The modal dialog error still appears
 
-## Watch Tower asks to remove files repeatedly
+Make sure the old `NyaUIPanel V2.x` file was removed from `ScriptUI Panels` (see [4.1](#41-upgrading-from-2x-important)). Another installed script using timers could also cause it.
 
-Watch Tower asks a "large deletion" confirmation only when 10+ items or more than 50% of the tracked items would be removed. If you answered **No**, it will not ask again during the same session for the same batch (the exact signature is remembered).
+## A preset or script cannot be used
 
-If you answered **Yes** and items were still not removed, they were probably **in use** in a composition. Those are flagged in red (`label = 1`) but never removed automatically — review them manually.
+Entries in red point to files that no longer exist. Use **Edit** / **Delete**, or add the file again from its new location.
 
----
+## Developer console
 
-## Watch Tower shows "script cannot run while a modal dialog is open"
-
-This error should not happen in V2.5.7 or later. All NyaUIPanel features that open native dialogs route through the `nya*` wrappers, which pause Watch Tower's scheduler while the dialog is open.
-
-If you still see this error:
-
-1. Confirm you are running V2.5.7 or later.
-2. Confirm no external script is opening a native dialog without using the wrappers.
-3. Check `NyaWatchTower.log` for the exact timestamp.
-
----
-
-## Comp Editor: "Change Resolution" does not seem to scale content
-
-Make sure you are running V2.5.7. Older versions only moved layers to the center without scaling them. The current Comp Editor scales content properly, respecting parenting, keyframes, spatial tangents, and shared precomps.
-
-If shared precomps are being left alone when you expected them to scale, this is by design — a precomp that is also used outside the current hierarchy is left untouched to prevent breaking unrelated compositions.
-
----
-
-## Comp Editor: "Change Duration" does not extend a layer
-
-By design, Change Duration only extends layers whose `outPoint` already reached the previous comp duration. Layers with their own shorter timing (intros, stingers, overlays) are left alone so your creative timing is preserved.
-
-If you want every layer scaled proportionally, this is not exposed in the current UI — use a proportional retime approach manually or contact the author.
-
----
-
-## Comp Editor: "Change FPS" changes my animation timing
-
-By design, Change FPS keeps the animation in **seconds** and snaps keyframes to the new frame grid. If you were thinking in frames (e.g. "this is a 12-frame animation"), the visual duration will be preserved but the frame count will change. To keep frame numbers instead, this requires manual adjustment or direct script access.
-
----
-
-## A preset cannot be applied
-
-Check whether the original `.ffx` file still exists at its stored location.
-
-Then use:
-
-**NyaPresets → Refresh**
-
-If the original preset has been moved manually, its stored library entry may no longer point to the correct file.
-
----
-
-## A script cannot be executed
-
-Verify:
-
-* The script file still exists.
-* Its extension is `.jsx`, `.jsxbin`, or `.js`.
-* The stored file path is correct.
-* The script is compatible with your After Effects version.
-
-Then use:
-
-**NyaScripts → Refresh**
-
-For additional information, inspect:
+With After Effects open, open in Chrome:
 
 ```text
-Documents\NyaScripts\NyaScripts_errors.log
+http://localhost:8098   NyaUIPanel
+http://localhost:8099   Watch Tower service
 ```
 
-(or `Folder.userData\NyaScripts\NyaScripts_errors.log` if Documents is not writable)
+These consoles only work if the `.debug` files are present (development builds).
 
 ---
 
-# 14. Quick Reference
+# 17. Quick Reference
 
-| Section    | Tool                 | Main Purpose                                                                 |
-| ---------- | -------------------- | ---------------------------------------------------------------------------- |
-| NyaUI      | Auto Folders (DECLUTTER) | Project organization + removal of unused duplicate imports               |
-| NyaUI      | Render Queue (RENDERHUB) | Add selected compositions to the Render Queue and automatically name outputs |
-| NyaUI      | Easy Precompose (PRECOMP) | Streamline precomposition                                              |
-| NyaUI      | True Comp Duplicator (COMP-2X) | Third-party composition duplication integration                    |
-| NyaUI      | Watch Tower          | Mirror disk folders into AE with auto-import and safe auto-removal           |
-| NyaUI      | Mark Cut (MARKCUT)   | Split layers at composition markers                                          |
-| NyaUI      | Expression Manager (X-PRESER) | Extract, save, load, and apply expressions                          |
-| NyaUI      | Reduce 2X (REDUCE-2X) | Create a reduced project copy                                              |
-| NyaUI      | Hide Layer (HIDELAYER) | Manage visibility/Shy using label colors                                  |
-| NyaUI      | Comp Editor (COMP-MGR) | Modify composition settings (resolution, duration, fps) with full safety  |
-| NyaUI      | Auto Scale 3D        | Maintain scale based on camera/depth                                         |
-| NyaUI      | NyaParallax          | Prepare camera-based 3D parallax                                             |
-| NyaPresets | Add Preset           | Add `.ffx` files                                                             |
-| NyaPresets | Apply                | Apply stored presets                                                         |
-| NyaPresets | Search               | Find presets                                                                 |
-| NyaPresets | Edit Name            | Edit preset information                                                      |
-| NyaPresets | Delete               | Remove preset entries                                                        |
-| NyaPresets | Import/Export        | Back up and transfer preset libraries                                        |
-| NyaScripts | Add Script           | Add scripts to the library                                                   |
-| NyaScripts | Run                  | Execute registered scripts                                                   |
-| NyaScripts | Search               | Find scripts                                                                 |
-| NyaScripts | Edit Name            | Rename aliases                                                               |
-| NyaScripts | Delete Script        | Remove library entries                                                       |
-| NyaScripts | Import/Export        | Back up and transfer script libraries                                        |
-| NyaScripts | Settings             | Configure execution behavior                                                 |
+| Section | Tool | Main Purpose |
+| --- | --- | --- |
+| NyaUI | DECLUTTER | Organize the project into folders, custom rules, remove unused duplicates |
+| NyaUI | RENDERHUB | Name, route and queue compositions for rendering |
+| NyaUI | PRECOMP | Precompose each selected layer trimmed to its length |
+| NyaUI | COMP-2X | True Comp Duplicator (third party) |
+| NyaUI | WATCHTOWER | Mirror disk folders into the project automatically |
+| NyaUI | MARKTOOLS | Cut, subtitles, bounce, pulse, scroller, proximity and toggle driven by markers |
+| NyaUI | X-PRESER | Extract, save, load and apply expressions |
+| NyaUI | REDUCE-2X | Create a reduced project copy |
+| NyaUI | HIDELAYER | Hide / Shy layers by label color |
+| NyaUI | COMP-MGR | Resolution, duration, FPS, Auto Scale 3D, NyaParallax |
+| NyaUI | Move attributes | Precomp option |
+| NyaUI | Edit layout | Rearrange, hide, rename, recolor, sections, sizes, pins |
+| NyaPresets | Library | Search, categories, favorites, pin, apply, import/export |
+| NyaScripts | Launcher | Search, categories, favorites, pin, run, import/export |
+| Settings | ⚙ | Themes, updates, layout backup, reload host |
 
 ---
 
-# 15. Recommended Workflow
+# 18. Safety and Usage Notes
 
-A typical NyaUIPanel workflow can look like this:
-
-### Project Preparation
-
-Use:
-
-**NyaUI → DECLUTTER**
-
-to organize the project and remove unused duplicate imports.
-
-### Composition Preparation
-
-Use:
-
-**COMP-MGR**
-
-to adjust:
-
-* Resolution (with proper scaling of content and parenting)
-* Duration (with optional extension of layers that reach the end)
-* FPS (with proper keyframe retiming)
-
-### 3D Setup
-
-Use:
-
-**NYAPARALLAX**
-
-when a camera-based depth setup is required.
-
-### Repetitive Expression Work
-
-Use:
-
-**X-PRESER**
-
-to save and reuse expressions.
-
-### Repetitive Effects
-
-Use:
-
-**NyaPresets**
-
-to keep frequently used `.ffx` presets organized.
-
-### External Tools
-
-Use:
-
-**NyaScripts**
-
-to keep frequently used scripts accessible from the same panel.
-
-### Disk-to-Project Sync
-
-Use:
-
-**WATCHTOWER**
-
-when you want a folder on disk to be mirrored into your AE project automatically (imports new files, removes gone files safely).
-
-### Final Rendering Preparation
-
-Use:
-
-**RENDERHUB**
-
-to batch selected compositions into the Render Queue and automatically organize their output names.
-
-### Marker-Based Cutting
-
-Use:
-
-**MARKCUT**
-
-when composition markers define your edit points.
-
----
-
-# 16. Safety and Usage Notes
-
-NyaUIPanel automates operations that can affect compositions, layers, project files, expressions, and the Render Queue.
-
-For that reason:
+NyaUIPanel automates operations that can affect compositions, layers, project files, expressions and the Render Queue.
 
 * Save important projects before large automated operations.
-* Verify your selection before using tools that operate on selected items.
-* Be aware that Render Queue clears existing queue items.
-* Be aware that Watch Tower, when ON, will import and (with confirmation) remove items from the project to mirror the disk.
-* Be aware that Comp Editor's Change Resolution will scale layer content, not just center it.
+* Check your selection before running tools that work on selected items.
+* RenderHub can clear the Render Queue (**Clear queue first**).
+* Watch Tower, when ON, imports and removes items to mirror the disk; large removals always wait for your confirmation.
+* Comp Editor's Change Resolution scales layer content, not just the composition.
 * Keep backups of your personal libraries.
-* Do not modify or redistribute the original NyaUIPanel components except as permitted by the included license.
+* Do not modify or redistribute NyaUIPanel except as permitted by the included license.
 * Third-party components remain subject to their own licenses and terms.
 
 ---
 
-# 17. Video Tutorial
-
-Video tutorial:
+# 19. Video Tutorial
 
 https://youtu.be/6tYuLW5nhQA
 
-The tutorial provides a visual introduction to NyaUIPanel and demonstrates its workflow.
+The tutorial introduces NyaUIPanel and its workflow (recorded with a previous version; the tools work the same way).
 
 ---
 
-# 18. License
+# 20. License
 
 NyaUIPanel is proprietary software created by **GX2NNR**.
 
-The included license applies to the original components created by GX2NNR.
+The included license applies to the original components created by GX2NNR. Third-party software and resources are not covered by the NyaUIPanel license and remain subject to their respective licenses and terms.
 
-Third-party software and resources are not covered by the NyaUIPanel license and remain subject to their respective licenses and terms.
-
-For complete licensing information, see the included:
-
-```text
-LICENSE
-```
-
-file.
+For complete licensing information, see the included `LICENSE` file.
 
 ---
 
-# 19. Credits
+# 21. Credits
 
 ## NyaUIPanel
 
-Created by:
+Created by **GX2NNR** · Discord: **gx2nnr**
 
-**GX2NNR**
-
-Discord:
-
-**gx2nnr**
-
-Compatible with:
-
-**Adobe After Effects 2020+**
+Compatible with **Adobe After Effects 2020+**
 
 ## Third-Party Component
 
-**True Comp Duplicator**
+**True Comp Duplicator** by **Brennan Chapman**
 
-Original author:
-
-**Brennan Chapman**
-
-True Comp Duplicator is a third-party After Effects script and is not owned by GX2NNR.
-
-The original third-party component remains subject to its own licensing terms.
-
-Original source:
+True Comp Duplicator is a third-party After Effects script and is not owned by GX2NNR. It remains subject to its own licensing terms.
 
 https://aescripts.com/true-comp-duplicator/
 
@@ -1724,19 +772,12 @@ https://aescripts.com/true-comp-duplicator/
 
 ## Final Notes
 
-NyaUIPanel is designed as a centralized workflow environment for Adobe After Effects.
-
-Its three main systems serve different purposes:
+NyaUIPanel is designed as a centralized workflow environment for Adobe After Effects:
 
 ```text
-NyaUI
-Production and workflow tools
-
-NyaPresets
-Preset organization
-
-NyaScripts
-Script organization and execution
+NyaUI         production and workflow tools, arranged your way
+NyaPresets    preset organization
+NyaScripts    script organization and execution
 ```
 
-Keeping these functions together allows frequently used tools to remain accessible without repeatedly navigating through the After Effects interface or separate folders.
+Keeping these functions together lets your most used tools stay one click away, without navigating through menus or separate folders.
