@@ -2,6 +2,6 @@
     "version":  "3.0.1",
     "package":  "https://github.com/GXNNR/NyaUIPanel/releases/download/v3.0.1/NyaUIPanel_3.0.1.zip",
     "sha256":  "4a6379e8e5a7f1cc4012ee857ae1f0fd02691468358843f9ede8f013fd756a12",
-    "notes":  "Nuevo diseño con íconos, fix de compatibilidad",
+    "notes":  "Nuevo diseño con íconos, fix de compatibilidad, Detección de nuevas versiones e instalaciones automáticas",
     "downloadUrl":  "https://github.com/GXNNR/NyaUIPanel/releases/tag/v3.0.1"
 }
