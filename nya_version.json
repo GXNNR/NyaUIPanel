@@ -1,7 +1,7 @@
 {
-    "version":  "3.0.1",
-    "package":  "https://github.com/GXNNR/NyaUIPanel/releases/download/v3.0.1/NyaUIPanel_3.0.1.zip",
-    "sha256":  "4a6379e8e5a7f1cc4012ee857ae1f0fd02691468358843f9ede8f013fd756a12",
-    "notes":  "Nuevo diseño con íconos, fix de compatibilidad, Detección de nuevas versiones e instalaciones automáticas",
-    "downloadUrl":  "https://github.com/GXNNR/NyaUIPanel/releases/tag/v3.0.1"
+    "version":  "3.1.0",
+    "package":  "https://github.com/GXNNR/NyaUIPanel/releases/download/v3.1.0/NyaUIPanel_3.1.0.zip",
+    "sha256":  "1d2e365cf846ed6a1ae22bda97efc26599420c9ec0a4e6a51b976e65de6c4e89",
+    "notes":  "Motion tools, FX, Reset, Loop, Mirror y pestaña NyaExtensions",
+    "downloadUrl":  "https://github.com/GXNNR/NyaUIPanel/releases/tag/v3.1.0"
 }
