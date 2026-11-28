@@ -1,7 +1,7 @@
 {
-    "version":  "3.1.0",
-    "package":  "https://github.com/GXNNR/NyaUIPanel/releases/download/v3.1.0/NyaUIPanel_3.1.0.zip",
-    "sha256":  "1d2e365cf846ed6a1ae22bda97efc26599420c9ec0a4e6a51b976e65de6c4e89",
-    "notes":  "Motion tools, FX \u0026 Reset, Loop, Mirror y pestaña NyaExtensions",
-    "downloadUrl":  "https://github.com/GXNNR/NyaUIPanel/releases/tag/v3.1.0"
+    "version":  "3.1.1",
+    "package":  "https://github.com/GXNNR/NyaUIPanel/releases/download/v3.1.1/NyaUIPanel_3.1.1.zip",
+    "sha256":  "850637852e8a4fe2dc507d2ddd48904e52829d78f81e3c5c5e10f868ec3a8670",
+    "notes":  "Fix: NyaExtensions ya no muestra extensiones repetidas ni nombres con %",
+    "downloadUrl":  "https://github.com/GXNNR/NyaUIPanel/releases/tag/v3.1.1"
 }
